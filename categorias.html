@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juegos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <a href="index.html" class="home-button">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg"
+            alt="Steam Logo"
+            class="steam-logo"
+          />
+          HOME
+        </a>
+        <li><a href="#" data-filter="all">ALL</a></li>
+        <li><a href="#" data-filter="free">FREE TO PLAY</a></li>
+        <li><a href="#" data-filter="action">ACCION</a></li>
+        <li><a href="#" data-filter="sport">SPORT</a></li>
+        <li><a href="#" data-filter="adventure">ADVENTURE</a></li>
+      </ul>
+    </nav>
+    <div class="game-container">
+      <!-- Aquí se insertarán los cards de los juegos -->
+    </div>
+    <div id="gameModal" class="modal">
+      <div class="modal-content">
+        <span class="close"></span>
+        <img id="modalImage"  alt="" />
+        <h3 id="modalName"></h3>
+        <h4 id="modalType"></h4>
+        <p id="modalPrice"></p>
+        <button id="modalLink">Ir al juego</button>
+      </div>
+    </div>
+    <script src="script-categorias.js"></script>
+  </body>
+</html>
