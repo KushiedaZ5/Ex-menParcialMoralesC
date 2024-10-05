@@ -14,34 +14,25 @@
         align-items: center;
         height: 100vh;
         margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
       }
 
       .contact-container {
         display: flex;
-        max-width: 1200px; /* Aumenta el ancho máximo */
+        flex-direction: column;
+        max-width: 100%;
         background-color: #1b2838;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         z-index: 1;
         border-radius: 10px;
         overflow: hidden;
-        height: 700px; /* Aumenta la altura */
-      }
-
-      .image-section {
-        flex: 1;
-        overflow: hidden;
-      }
-
-      .image-section img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 70%;
+        max-width: 600px;
       }
 
       .form-section {
-        flex: 1;
-        padding: 100px; /* Aumenta el padding */
+        padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -50,7 +41,7 @@
 
       .form-section h2 {
         margin-bottom: 20px;
-        font-size: 28px; /* Aumenta el tamaño de la fuente */
+        font-size: 24px;
         color: #c7d5e0;
         position: relative;
         text-align: center;
@@ -74,9 +65,9 @@
 
       .form-section input,
       .form-section textarea {
-        margin-bottom: 20px; /* Aumenta el margen inferior */
-        padding: 15px; /* Aumenta el padding */
-        font-size: 18px; /* Aumenta el tamaño de la fuente */
+        margin-bottom: 20px;
+        padding: 15px;
+        font-size: 16px;
         border: 1px solid #ddd;
         border-radius: 5px;
         background-color: #1b2838;
@@ -86,22 +77,22 @@
 
       .form-section textarea {
         resize: none;
-        height: 150px; /* Aumenta la altura del textarea */
+        height: 100px;
       }
 
       .form-section button {
-        padding: 15px; /* Aumenta el padding */
+        padding: 15px;
         background-color: #000000;
         color: white;
         border: none;
         border-radius: 5px;
-        font-size: 18px; /* Aumenta el tamaño de la fuente */
+        font-size: 16px;
         cursor: pointer;
         transition: background-color 0.3s;
       }
 
       .form-section button:hover {
-        background-color: #000000;
+        background-color: #333333;
       }
 
       .form-section input::placeholder,
@@ -116,6 +107,10 @@
         color: #c7d5e0;
         background-color: #2a475e;
         transition: background-color 0.3s ease;
+        margin-bottom: 20px;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 5px;
       }
 
       .home-button:hover {
@@ -126,6 +121,31 @@
         width: 20px;
         height: 20px;
         margin-right: 10px;
+      }
+
+      @media (min-width: 768px) {
+        .contact-container {
+          flex-direction: row;
+          height: 700px;
+        }
+
+        .form-section {
+          flex: 1;
+          padding: 100px;
+        }
+
+        .form-section h2 {
+          font-size: 28px;
+        }
+
+        .form-section input,
+        .form-section textarea {
+          font-size: 18px;
+        }
+
+        .form-section button {
+          font-size: 18px;
+        }
       }
     </style>
   </head>
@@ -145,8 +165,8 @@
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <input type="text" name="phone" placeholder="Phone" />
-          <input type="text" name="name" placeholder="Your Game" required />
-          <input type="text" name="name" placeholder="Enlace" required />
+          <input type="text" name="game" placeholder="Your Game" required />
+          <input type="text" name="link" placeholder="Enlace" required />
           <button type="submit">Send</button>
         </form>
       </div>
